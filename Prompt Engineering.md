@@ -63,3 +63,47 @@ generative AI model. As a general rule of thumb, it should use at least three to
 
 ![Table 2. An example of few-shot prompting](https://github.com/ChloeWu822/LLM/blob/main/Table%202.%20An%20example%20of%20few-shot%20prompting.png)
 
+### System, contextual and role prompting
+System, contextual and role prompting are all techniques used to guide how LLMs generate text, but they focus on different aspects:
+
+- **System prompting** sets the overall context and purpose for the language model. It defines the ‘big picture’ of what the model should be doing, like translating a language, classifying a review etc.
+- **Contextual prompting** provides specific details or background information relevant to the current conversation or task. It helps the model to understand the nuances of what’s being asked and tailor the response accordingly.
+- **Role prompting** assigns a specific character or identity for the language model to adopt. This helps the model generate responses that are consistent with the assigned role and its associated knowledge and behavior.
+
+There can be considerable overlap between system, contextual, and role prompting. E.g. a prompt that assigns a role to the system, can also have a context. However, each type of prompt serves a slightly different primary purpose:
+- System prompt: Defines the model’s fundamental capabilities and overarching purpose.
+- Contextual prompt: Provides immediate, task-specific information to guide the response. It’s highly specific to the current task or input, which is dynamic.
+- Role prompt: Frames the model’s output style and voice. It adds a layer of specificity and personality.
+
+#### System Prompt
+
+System prompts can be useful for generating output that meets specific requirements. The name ‘system prompt’ actually stands for ‘providing an additional task to the system’. For example, you could use a system prompt to generate a code snippet that is compatible with a specific programming language, or you could use a system prompt to return a certain structure. 
+
+![Table 3. An example of system prompting](https://github.com/ChloeWu822/LLM/blob/b2184f4c68af11a1a7ec9e2efd6ffd8ab3769133/Table%203.%20An%20example%20of%20system%20prompting.png)
+
+
+The following table returns the output in JSON format. By prompting for a JSON format it forces the model to create a structure and limit hallucinations.
+
+![Table 4. An example of system prompting with JSON format](https://github.com/ChloeWu822/LLM/blob/b2184f4c68af11a1a7ec9e2efd6ffd8ab3769133/Table%204.%20An%20example%20of%20system%20prompting%20with%20JSON%20format.png)
+
+Note: System prompts can also be really useful for safety and toxicity. To control the output, simply add an additional line to your prompt like: ‘You should be respectful in your answer.’.
+
+
+#### Role Prompt
+
+Defining a role perspective for an AI model gives it a blueprint of the tone, style, and focused expertise you’re looking for to improve the quality, relevance, and effectiveness of the output. 
+
+![Table 5. An example of role prompting](https://github.com/ChloeWu822/LLM/blob/fa89dade01614cae0d3cd9459c1fc285e6fa4c5b/Table%205.%20An%20example%20of%20role%20prompting.png)
+
+Here are some styles can choose: Confrontational, Descriptive, Direct, Formal, Humorous, Influential, Informal, Inspirational, Persuasive
+
+![Table 6. An example of role prompting with a humorous tone and style](https://github.com/ChloeWu822/LLM/blob/fa89dade01614cae0d3cd9459c1fc285e6fa4c5b/Table%206.%20An%20example%20of%20role%20prompting%20with%20a%20humorous%20tone%20and%20style.png)
+
+#### Contextual Prompt
+Contextual prompts can help ensure that AI interactions are as seamless and efficient as possible. The model will be able to more quickly understand the
+request and be able to generate more accurate and relevant responses.
+
+![Table 7. An example of contextual prompting](https://github.com/ChloeWu822/LLM/blob/fa89dade01614cae0d3cd9459c1fc285e6fa4c5b/Table%207.%20An%20example%20of%20contextual%20prompting.png)
+
+
+
