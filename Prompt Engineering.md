@@ -45,3 +45,21 @@ Single answer: temperature = 0. </br>
 WARNING: Inappropriate temperature and top-k/top-p settings may cause "repetition loop bug" (response ending with a large amount of filler words), which is a common issue in LLMs where the model gets stuck in a cycle, repeatedly generating the same (filler) word, phrase, or sentence structure. And this can occur at both low and high temperature settings. At low temperatures, the model becomes overly deterministic, sticking rigidly to the highest probability path, which can lead to a loop if that path revisits previously generated text. Conversely, at high temperatures, the model's output becomes excessively random, increasing the probability that a randomly chosen word/phrase will back to a prior state, creating a loop due to the vast number of available options. 
 
 NOTE: With more freedom (higher temperature, top-K, top-P), the LLM might generate text that is less relevant.
+
+## Prompt Techniques
+
+### General prompting / zero shot
+A zero-shot prompt is the simplest type of prompt, and it only provides a description of a task and some text for the LLM to get started with.
+
+![Table 1. An example of zero-shot prompting](https://github.com/ChloeWu822/LLM/blob/52ecc595e5e7f6f8a73a91f0a61d8aa11188834c/Table%201.%20An%20example%20of%20zero-shot%20prompting.png)
+
+### One-shot & few-shot
+When creating prompts for AI models, it is helpful to provide examples. These examples can help the model understand what you are asking for and especially useful when you want to steer the model to a certain output structure or pattern.
+**One-shot** prompt, provides a single example, hence the name one-shot. The idea is the model has an example it can imitate to best complete the task.
+**Few-shot** prompt, provides multiple examples to the model. Multiple examples of the desired pattern increases the chance the model follows the pattern.
+
+The number of examples for few-shot prompting depends on a few factors: the complexity of the task, the quality of the examples, and the capabilities of the
+generative AI model. As a general rule of thumb, it should use at least three to five examples for few-shot prompting. It may need to use more examples for more complex tasks, or it may need to use fewer due to the input length limitation of the model.
+
+![Table 2. An example of few-shot prompting](https://github.com/ChloeWu822/LLM/blob/main/Table%202.%20An%20example%20of%20few-shot%20prompting.png)
+
