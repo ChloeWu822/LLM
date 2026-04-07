@@ -152,7 +152,8 @@ Reason and act (ReAct) prompting是一种解决复杂任务的范式，它将自
 ReAct类似于人类在现实世界中的运作方式，通过语言进行推理，并采取行动来获取信息。
 
 在代码片段1中，使用了Python的langchain框架，同时结合了VertexAI（google-cloud-aiplatform）和 google-search-results 这两个pip包。
-![]()
+![Snippet 1. Creating a ReAct Agent with LangChain and VertexAI](https://github.com/ChloeWu822/LLM/blob/ce0fde986fe280bd0763b616713fe4f4f515e3d5/Snippet%201.%20Creating%20a%20ReAct%20Agent%20with%20LangChain%20and%20VertexAI.png)
 
 代码片段2展示了结果。请注意，ReAct进行了五次搜索链式操作。LLM抓取谷歌搜索结果中获取信息，以确定金属乐队有四名成员。然后它会搜索每个乐队成员，请求他们的子女总数，并将所有总数相加。最后，返回子女的总数作为最终答案。
-!()[]
+![Snippet 2. Executing ReAct Agent in the terminal](https://github.com/ChloeWu822/LLM/blob/ce0fde986fe280bd0763b616713fe4f4f515e3d5/Snippet%202.%20Executing%20ReAct%20Agent%20in%20the%20terminal.png)
+
