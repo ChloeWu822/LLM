@@ -106,3 +106,21 @@ Step-back prompting是一种提升模型性能的技术，其原理是先促使L
 ![Table 8. A traditional prompt before we compare it with a step back prompt](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%208.%20A%20traditional%20prompt%20before%20we%20compare%20it%20with%20a%20step%20back%20prompt.png)
 ![Table 9. An example of prompting for self consistency](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%209.%20An%20example%20of%20prompting%20for%20self%20consistency.png)
 ![Table 10. An example of prompting for self consistency](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%2010.%20An%20example%20of%20prompting%20for%20self%20consistency.png)
+
+
+### Chain of Thought (CoT)
+Chain of Thought (CoT) prompting是一种通过**生成中间推理步骤**来提升推理能力的技术。
+
+![Table 12. An example of Chain of Thought prompting](https://github.com/ChloeWu822/LLM/blob/1c1f4c86cbe65db9626c247e5e3a2f0b3444b73b/Table%2012.%20An%20example%20of%20Chain%20of%20Thought%20prompting.png)
+
+优点：
+1. 操作简便，效果显著，并且能与现成的LLM完美配合（无需进行微调）。
+2. 更好的可解释性，可以从LLM的回复中学习，并看到所遵循的推理步骤，便于识别bug。
+3. CoT在不同版本的LM之间切换时似乎能提高其稳定性，所以使用CoT的prompt在不同LLM之间的性能差异会更小。
+
+缺点：
+需要输出更多tokens，意味着更高的成本和更长的回复时间。
+
+将它与few-shot prompting结合起来，可以在更复杂的推理任务中获得更好的结果。
+
+![Table 13. An example of chain of thought prompting with a single-shot](https://github.com/ChloeWu822/LLM/blob/1c1f4c86cbe65db9626c247e5e3a2f0b3444b73b/Table%2013.%20An%20example%20of%20chain%20of%20thought%20prompting%20with%20a%20single-shot.png)
