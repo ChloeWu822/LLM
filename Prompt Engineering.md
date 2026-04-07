@@ -75,6 +75,8 @@ There can be considerable overlap between system, contextual, and role prompting
 - Contextual prompt: Provides immediate, task-specific information to guide the response. It’s highly specific to the current task or input, which is dynamic.
 - Role prompt: Frames the model’s output style and voice. It adds a layer of specificity and personality.
 
+Note: Claude's "role system" is more implicit and less structured, handing over more control to the content itself rather than the type labels of the messages. It encourages the use of natural language to control behavior instead of relying on fixed role labels. Gemini uses _role: contextual_ to pass documents, while Claude incorporates the **contextual** function into the content structure and achieves the same effect through content blocks; Claude's **role** is strictly limited to the two specific values ("user", "assistant"), and there are also constraints on the order, i.e. the conversation must strictly alternate (user → assistant → user); Claude has an independent **system** parameter. Claude's approach is more flexible, but it requires developers to do semantic organization in the system prompt and content themselves. Gemini's approach is more friendly to the framework and engineering, with clear responsibility boundaries.
+
 #### System Prompt
 
 System prompts can be useful for generating output that meets specific requirements. The name ‘system prompt’ actually stands for ‘providing an additional task to the system’. For example, you could use a system prompt to generate a code snippet that is compatible with a specific programming language, or you could use a system prompt to return a certain structure. 
