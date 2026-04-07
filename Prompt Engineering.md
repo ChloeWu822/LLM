@@ -148,3 +148,25 @@ It follows the following steps:
 ![Table 14. An example of prompting for self consistency-1.png](https://github.com/ChloeWu822/LLM/blob/baa0bb26e2c4fd726b482ff2dad538b8f1bc3949/Table%2014.%20An%20example%20of%20prompting%20for%20self%20consistency-1.png)
 ![Table 14. An example of prompting for self consistency-2.png](https://github.com/ChloeWu822/LLM/blob/263337c46d5e8f75ef296291e1bd6386c8149567/Table%2014.%20An%20example%20of%20prompting%20for%20self%20consistency-2.png)
 ![Table 14. An example of prompting for self consistency-3.png](https://github.com/ChloeWu822/LLM/blob/7147144e12ad6365223859ccaddbf965fb1a3f67/Table%2014.%20An%20example%20of%20prompting%20for%20self%20consistency-3.png)
+
+### Tree of Thoughts (ToT)
+
+Tree of Thoughts (ToT) generalizes the concept of CoT prompting because it allows LLMs to **explore multiple different reasoning paths simultaneously**, rather than just following a single linear CoT. 
+
+Tree of Thoughts(ToT)将CoT的概念进行了扩展，因为它使LLM能够**同时探索多种不同的推理路径**，而非仅仅遵循单一的线性流程。
+
+![Figure 1. A visualization of chain of thought prompting on the left versus. Tree of Thoughts prompting on the right.png](https://github.com/ChloeWu822/LLM/blob/0378887decea682761f872b2724ca9fba73471ee/Figure%201.%20A%20visualization%20of%20chain%20of%20thought%20prompting%20on%20the%20left%20versus.%20Tree%20of%20Thoughts%20prompting%20on%20the%20right.png)
+
+### ReAct (reason & act)
+Reason and act (ReAct) prompting is a paradigm to solve complex tasks **using natural language reasoning combined with external tools** (search, code
+interpreter etc.), allowing the LLM to perform certain actions, such as interacting with external APIs to retrieve information, which is a first step towards agent modeling. It works by **combining reasoning and acting into a thought-action loop**. The LLM first reasons about the problem and generates an action plan, and then performs the actions in the plan and observes the results. Next, the LLM uses the observations to update its reasoning and generate a new action plan. This process continues until the LLM reaches a solution to the problem.
+
+ReAct mimics how humans operate in the real world, as we reason verbally and can take actions to gain information.
+
+In code Snippet 1, I am using the langchain framework for Python, together with VertexAI (google-cloud-aiplatform) and the google-search-results pip packages.
+![Snippet 1. Creating a ReAct Agent with LangChain and VertexAI](https://github.com/ChloeWu822/LLM/blob/ce0fde986fe280bd0763b616713fe4f4f515e3d5/Snippet%201.%20Creating%20a%20ReAct%20Agent%20with%20LangChain%20and%20VertexAI.png)
+
+Code Snippet 2 shows the result. Notice that ReAct makes a chain of five searches, the LLM is scraping Google search results to figure out the band Metallica has four band members. Then it searches each band member to request the total of children and add up the total. Finally, it returns the total number of children as the final answer
+![Snippet 2. Executing ReAct Agent in the terminal](https://github.com/ChloeWu822/LLM/blob/ce0fde986fe280bd0763b616713fe4f4f515e3d5/Snippet%202.%20Executing%20ReAct%20Agent%20in%20the%20terminal.png)
+
+
