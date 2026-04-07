@@ -84,6 +84,7 @@ System prompts对于生成符合特定要求的输出非常有用。“System pr
 
 注意：System prompts对于安全性和毒性方面的信息同样非常有用。要控制输出内容，只需在提示中添加一行额外内容，例如：“You should be respectful in your answer.”
 
+注意：Claude的roles体系更隐式，不那么结构化，把更多控制权交给了prompt的内容本身，而不是消息的类型标签，鼓励用自然语言描述来控制行为，而非依赖固定的role标签。Gemini用role: contextual传文档，而Claude把contextual的功能内化到content结构里，用content blocks实现同样效果；Claude的role字段是严格枚举的，只允许特定值user和assistant，并且顺序也有约束，对话必须严格交替(user → assistant → user 交替)；Claude有独立的system参数。Claude的方式更灵活，但需要开发者自己在system prompt和content里做好语义组织，而Gemini的方式对框架和工程化更友好，职责边界清晰。
 
 #### Role Prompt
 为AI模型设定一个角色视角，能为其提供一份关于语气、风格以及所需专业知识的概览，从而有助于提升输出内容的质量、相关性和有效性。
@@ -98,4 +99,3 @@ System prompts对于生成符合特定要求的输出非常有用。“System pr
 Contextual prompts有助于确保AI的交互尽可能地流畅和高效，使得模型将能够更快地理解请求，并能够生成更准确且更相关的回复。
 
 ![Table 7. An example of contextual prompting](https://github.com/ChloeWu822/LLM/blob/fa89dade01614cae0d3cd9459c1fc285e6fa4c5b/Table%207.%20An%20example%20of%20contextual%20prompting.png)
-
