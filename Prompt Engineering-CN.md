@@ -147,11 +147,9 @@ Tree of Thoughts(ToT)将CoT的概念进行了扩展，因为它使LLM能够**同
 
 
 ### ReAct (reason & act)
-Reason and act (ReAct) prompting是一种解决复杂任务的范式，它将自然语言推理与外部工具（搜索、代码解释器等）相结合，使大型语言模型能够执行某些action (例如与外部API进行交互以获取信息)，这是构建Agent的第一步。
+Reason and act (ReAct) prompting是一种解决复杂任务的范式，它将自然语言推理与外部工具（搜索、代码解释器等）相结合，使大型语言模型能够执行某些action (例如与外部API进行交互以获取信息)，这是构建Agent的第一步。LLMs首先对问题进行分析并制定出action plan。接着，它会执行该plan中的各项行动，并观察结果。然后，LLMs会利用这些观察结果来更新其推理过程，并生成新的action plan。持续这个过程，一直到该模型找到问题的解决方案。
 
 ReAct类似于人类在现实世界中的运作方式，通过语言进行推理，并采取行动来获取信息。
-
-LLMs首先对问题进行分析并制定出action plan。接着，它会执行该plan中的各项行动，并观察结果。然后，LLMs会利用这些观察结果来更新其推理过程，并生成新的action plan。持续这个过程，一直到该模型找到问题的解决方案。
 
 在代码片段1中，使用了Python的langchain框架，同时结合了VertexAI（google-cloud-aiplatform）和 google-search-results 这两个pip包。
 ![]()
