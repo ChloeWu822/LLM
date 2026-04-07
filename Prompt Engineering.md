@@ -108,4 +108,11 @@ request and be able to generate more accurate and relevant responses.
 ![Table 7. An example of contextual prompting](https://github.com/ChloeWu822/LLM/blob/fa89dade01614cae0d3cd9459c1fc285e6fa4c5b/Table%207.%20An%20example%20of%20contextual%20prompting.png)
 
 
+### Step-back prompting
+Step-back prompting is a technique for improving the performance by making the LLM to **first consider a general question related to the specific task** at hand, and then **feeding the answer to that general question into a subsequent prompt** for the specific task. This ‘step back’ allows the LLM to activate relevant background knowledge and reasoning processes before attempting to solve the specific problem.
 
+It can help to mitigate biases in LLM responses, by focusing on general principles instead of specific details.
+
+![Table 8. A traditional prompt before we compare it with a step back prompt](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%208.%20A%20traditional%20prompt%20before%20we%20compare%20it%20with%20a%20step%20back%20prompt.png)
+![Table 9. An example of prompting for self consistency](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%209.%20An%20example%20of%20prompting%20for%20self%20consistency.png)
+![Table 10. An example of prompting for self consistency](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%2010.%20An%20example%20of%20prompting%20for%20self%20consistency.png)
