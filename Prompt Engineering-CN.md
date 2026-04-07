@@ -99,3 +99,10 @@ System prompts对于生成符合特定要求的输出非常有用。“System pr
 Contextual prompts有助于确保AI的交互尽可能地流畅和高效，使得模型将能够更快地理解请求，并能够生成更准确且更相关的回复。
 
 ![Table 7. An example of contextual prompting](https://github.com/ChloeWu822/LLM/blob/fa89dade01614cae0d3cd9459c1fc285e6fa4c5b/Table%207.%20An%20example%20of%20contextual%20prompting.png)
+
+### Step-back prompting
+Step-back prompting是一种提升模型性能的技术，其原理是先促使LLM先考虑与当前具体任务相关的通用问题，然后将该通用问题的答案作为后续针对具体任务的提示输入，从而让LLM在尝试解决具体问题之前能够激活相关的背景知识和推理过程。这有助于减轻LLM回复中的偏见，因为它侧重于一般原则而非具体细节。
+
+![Table 8. A traditional prompt before we compare it with a step back prompt](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%208.%20A%20traditional%20prompt%20before%20we%20compare%20it%20with%20a%20step%20back%20prompt.png)
+![Table 9. An example of prompting for self consistency](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%209.%20An%20example%20of%20prompting%20for%20self%20consistency.png)
+![Table 10. An example of prompting for self consistency](https://github.com/ChloeWu822/LLM/blob/9679eca35b4cb89bb06896c28117dcd0ba2295ec/Table%2010.%20An%20example%20of%20prompting%20for%20self%20consistency.png)
