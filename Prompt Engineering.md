@@ -169,4 +169,13 @@ In code Snippet 1, I am using the langchain framework for Python, together with 
 Code Snippet 2 shows the result. Notice that ReAct makes a chain of five searches, the LLM is scraping Google search results to figure out the band Metallica has four band members. Then it searches each band member to request the total of children and add up the total. Finally, it returns the total number of children as the final answer
 ![Snippet 2. Executing ReAct Agent in the terminal](https://github.com/ChloeWu822/LLM/blob/ce0fde986fe280bd0763b616713fe4f4f515e3d5/Snippet%202.%20Executing%20ReAct%20Agent%20in%20the%20terminal.png)
 
+### Automatic Prompt Engineering (APE)
+Automatic Prompt Engineering (APE): write a prompt to write prompts, which not only alleviates the need for human input but also enhances the model’s performance in various tasks.
+
+For example, use APE to train a chatbot for a merchandise t-shirt webshop, figuring out all the various ways customers could phrase their order for buying a band merchandise t-shirt.
+
+1. Write the prompt which will generate the output variants.
+![Table 15. Use an LLM to generate prompts](https://github.com/ChloeWu822/LLM/blob/30e94b0fffbe7a6b185e54f57a2d3c4374b4c14d/Table%2015.%20Use%20an%20LLM%20to%20generate%20prompts.png)
+2. Evaluate all of the instruction candidates by scoring the candidates based on a chosen metric, For example, **BLEU** (Bilingual Evaluation Understudy) or **ROUGE** (Recall-Oriented Understudy for Gisting Evaluation).
+3. Select the instruction candidate with the highest evaluation score.
 
