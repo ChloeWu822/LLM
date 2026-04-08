@@ -157,3 +157,15 @@ ReAct类似于人类在现实世界中的运作方式，通过语言进行推理
 代码片段2展示了结果。请注意，ReAct进行了五次搜索链式操作。LLM抓取谷歌搜索结果中获取信息，以确定金属乐队有四名成员。然后它会搜索每个乐队成员，请求他们的子女总数，并将所有总数相加。最后，返回子女的总数作为最终答案。
 ![Snippet 2. Executing ReAct Agent in the terminal](https://github.com/ChloeWu822/LLM/blob/ce0fde986fe280bd0763b616713fe4f4f515e3d5/Snippet%202.%20Executing%20ReAct%20Agent%20in%20the%20terminal.png)
 
+
+### 自动提示工程（Automatic Prompt Engineering，APE）
+自动提示工程（Automatic Prompt Engineering，APE）：编写一个用于生成promtp的prompt，这不仅减少了对人工输入的需求，还能提升模型在各种任务中的表现。
+
+For example, use APE that will help with training a chatbot for a merchandise t-shirt webshop. We want to figure out all the various ways customers
+例如，使用APE可帮助训练一家商品T恤网店的聊天机器人，找出顾客在购买乐队商品T恤时可能采用的各种表达方式。
+
+1. 编写能够生成输出变体的prompt。
+![Table 15. Use an LLM to generate prompts](https://github.com/ChloeWu822/LLM/blob/30e94b0fffbe7a6b185e54f57a2d3c4374b4c14d/Table%2015.%20Use%20an%20LLM%20to%20generate%20prompts.png)
+2. 根据选定的指标对所有指令候选方案进行评分。例如，可以使用**BLEU**（双语评估研究工具）或**ROUGE**（用于摘要评估的召回导向研究工具）等指标。
+3. 选择评价分数最高的指令候选方案。
+
